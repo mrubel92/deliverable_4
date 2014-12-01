@@ -27,7 +27,7 @@ public class Calculator {
 		double value = Math.pow(op1, op2);
 		return (int) value;
 	}
-	public static int factorial(int op1)
+	/*public static int factorial(int op1)
 	{
 		int value = op1;
 		if(value == 1)
@@ -35,5 +35,5 @@ public class Calculator {
 			return 1;
 		}
 		return value * factorial(value-1);
-	}
+	}*/
 }

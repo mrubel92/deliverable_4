@@ -15,7 +15,6 @@ public class RunCalculator {
 			System.out.println("3. Multiply");
 			System.out.println("4. Divide");
 			System.out.println("5. Exponent");
-			System.out.println("6. Factorial");
 			System.out.println("7. Quit");
 			choice = input.nextInt();
 			
@@ -54,17 +53,11 @@ public class RunCalculator {
 				op1 = Calculator.exponent(op1, op2);
 				System.out.println("Result is " + op1);
 			}
-			else if(choice == 6)
-			{
-				System.out.println("Taking factorial of "+ op1);
-				op1 = Calculator.factorial(op1);
-				System.out.println("Result is " + op1);
-			}
-			else if(choice != 7)
+			else if(choice != 6)
 			{
 				System.out.println("Entered invalid option, please try again.");
 			}
-		}while(choice != 7);
+		}while(choice != 6);
 		System.out.println("Goodbye!");
 	}
 }
