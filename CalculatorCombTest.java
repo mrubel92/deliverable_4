@@ -1,7 +1,11 @@
-import junit.framework.TestCase;
+import static org.junit.Assert.*;
+
+import org.junit.Test;
 
 
-public class CalculatorTest extends TestCase {
+public class CalculatorCombTest {
+
+	@Test
 	public void testSingleFunction()
 	{
 		//Each standalone test
@@ -11,6 +15,8 @@ public class CalculatorTest extends TestCase {
 		assertTrue("Test divide", 2 == Calculator.divide(8, 4));
 		assertTrue("Test exponents", 64 == Calculator.exponent(2, 6));
 	}
+	
+	@Test
 	public void testDoubleFunction()
 	{
 		//Each 2-function test
@@ -28,6 +34,8 @@ public class CalculatorTest extends TestCase {
 		
 		assertTrue("Test divide/exponent", 7 == Calculator.divide(343, Calculator.exponent(7, 2)));
 	}
+	
+	@Test
 	public void testTripleFunction()
 	{
 		//Each 3-function test
@@ -47,6 +55,8 @@ public class CalculatorTest extends TestCase {
 		
 		assertTrue("Test multiply/divide/exponent", 21 == Calculator.multiply(7, Calculator.divide(2187, Calculator.exponent(9, 3))));
 	}
+	
+	@Test
 	public void testQuadFunction()
 	{
 		//Each 4-way function test
@@ -56,9 +66,12 @@ public class CalculatorTest extends TestCase {
 		assertTrue("Test add/multiply/divide/exponent", 585 == Calculator.add(91, Calculator.multiply(38, Calculator.divide(325, Calculator.exponent(5, 2)))));
 		assertTrue("Test subtract/multiply/divide/exponent", -27 == Calculator.subtract(5, Calculator.multiply(4, Calculator.divide(4096, Calculator.exponent(8, 3)))));
 	}
+	
+	@Test
 	public void testQuintFunction()
 	{
 		//All 5 functions test
 		assertTrue("Test add/subtract/multiply/divide/exponent", 114 == Calculator.add(67, Calculator.subtract(82, Calculator.multiply(5, Calculator.divide(1512, Calculator.exponent(6, 3))))));
 	}
+
 }

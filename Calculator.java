@@ -1,30 +1,31 @@
 public class Calculator {
-	public static int add(int op1, int op2)
+	public static Integer add(Integer op1, Integer op2)
 	{
-		int value = op1 + op2;
+		Integer value = new Integer(op1 + op2);
 		return value;
 	}
 	
-	public static int subtract(int op1, int op2)
+	public static Integer subtract(Integer op1, Integer op2)
 	{
-		int value = op1 - op2;
+		Integer value = new Integer(op1 - op2);
 		return value;
 	}
 	
-	public static int multiply(int op1, int op2)
+	public static Integer multiply(Integer op1, Integer op2)
 	{
-		int value = op1 * op2;
+		Integer value = op1 * op2;
 		return value;
 	}
 	
-	public static int divide(int op1, int op2)
+	public static Integer divide(Integer op1, Integer op2)
 	{
-		int value = op1 / op2;
+		Integer value = op1 / op2;
 		return value;
 	}
-	public static int exponent(int op1, int op2)
+	public static Integer exponent(Integer op1, Integer op2)
 	{
 		double value = Math.pow(op1, op2);
-		return (int) value;
+		Integer retVal = new Integer((int) value);
+		return retVal;
 	}
 }
