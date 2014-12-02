@@ -15,7 +15,7 @@ public class RunCalculator {
 			System.out.println("3. Multiply");
 			System.out.println("4. Divide");
 			System.out.println("5. Exponent");
-			System.out.println("7. Quit");
+			System.out.println("6. Quit");
 			choice = input.nextInt();
 			
 			if(choice == 1)
